@@ -8,12 +8,14 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="one-to-one" />
+        <module name="many-to-many" />
         <module name="one-to-many" />
         <module name="crud-operation" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="crud-operation" target="11" />
+      <module name="many-to-many" target="11" />
       <module name="one-to-many" target="11" />
       <module name="one-to-one" target="11" />
     </bytecodeTargetLevel>
