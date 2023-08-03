@@ -2,7 +2,7 @@ package entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
-import jakarta.persistence.OneToOne;
+import jakarta.persistence.ManyToOne;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.ToString;
@@ -16,17 +16,15 @@ public class Book {
     private String id;
     private String bookName;
 
+    @ManyToOne
+    private Author author;
 
-    @OneToOne
-    private Author authorName;
-
-    public Book() {
-
+    public Book(String id, String bookName) {
+        this.id = id;
+        this.bookName = bookName;
     }
 
-    public Book(String id, String title) {
-        this.id = id;
-        this.bookName = title;
+    public Book() {
 
     }
 }
